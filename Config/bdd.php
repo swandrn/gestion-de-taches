@@ -1,4 +1,5 @@
 <?php
+// bdd.php
 class Database {
     private $host = "localhost";
     private $db_name = "gestion_taches";
@@ -19,5 +20,15 @@ class Database {
         return $this->conn;
     }
 }
+
+// Test de la connexion
+$database = new Database();
+$conn = $database->getConnection();
+if ($conn) {
+    echo "Connexion réussie.";
+} else {
+    echo "Erreur de connexion.";
+}
+
 ?>
 

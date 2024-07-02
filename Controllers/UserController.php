@@ -8,30 +8,40 @@ class UserController {
     }
 
     public function showLoginForm() {
-        // Affiche le formulaire de connexion
         include 'views/login.php';
     }
 
     public function showRegisterForm() {
-        // Affiche le formulaire d'inscription
         include 'views/register.php';
     }
 
     public function register() {
-        // Inscription de l'utilisateur
-        $nom = $_POST['username'];
-        $email = $_POST['email'];
-        $mot_de_passe = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        $nom = $_POST['username'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $mot_de_passe = $_POST['password'] ?? '';
 
-        $query = $this->db->prepare('INSERT INTO users (nom, email, mot_de_passe) VALUES (?, ?, ?)');
-        $query->execute([$nom, $email, $mot_de_passe]);
+        if (empty($nom) || empty($email) || empty($mot_de_passe)) {
+            echo "Tous les champs sont obligatoires.";
+            return;
+        }
 
-        header('Location: index.php?action=login');
-        exit();
+        $mot_de_passe = password_hash($mot_de_passe, PASSWORD_BCRYPT);
+
+        try {
+            $query = $this->db->prepare('INSERT INTO users (nom, email, mot_de_passe) VALUES (?, ?, ?)');
+            if ($query->execute([$nom, $email, $mot_de_passe])) {
+                echo "Inscription réussie.";
+                header('Location: index.php?action=login');
+                exit();
+            } else {
+                echo "Erreur lors de l'inscription.";
+            }
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
     }
 
     public function login() {
-        // Connexion de l'utilisateur
         $email = $_POST['email'];
         $password = $_POST['password'];
 
@@ -49,7 +59,6 @@ class UserController {
     }
 
     public function logout() {
-        // Déconnexion de l'utilisateur
         session_destroy();
         header('Location: index.php');
         exit();

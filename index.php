@@ -60,12 +60,20 @@ if (isset($_GET['action'])) {
             $userController->logout();
             break;
         case 'login':
-            // Afficher le formulaire de connexion
-            $userController->showLoginForm();
+            // Gérer le formulaire de connexion
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $userController->login();
+            } else {
+                $userController->showLoginForm();
+            }
             break;
         case 'register':
-            // Afficher le formulaire d'inscription
-            $userController->showRegisterForm();
+            // Gérer le formulaire d'inscription
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $userController->register();
+            } else {
+                $userController->showRegisterForm();
+            }
             break;
         default:
             // Rediriger vers la page d'accueil par défaut si l'action demandée n'est pas reconnue
