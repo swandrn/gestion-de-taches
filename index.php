@@ -35,7 +35,11 @@ if (isset($_GET['action'])) {
         case 'edit_task':
             // Afficher le formulaire pour modifier une tâche si l'utilisateur est connecté et si l'ID de la tâche est fourni
             if (isset($_SESSION['user_id']) && isset($_GET['task_id'])) {
-                $taskController->showEditTaskForm($_GET['task_id']);
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $taskController->updateTask($_GET['task_id']);
+                } else {
+                    $taskController->showEditTaskForm($_GET['task_id']);
+                }
             } else {
                 // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
                 header('Location: index.php?action=login');

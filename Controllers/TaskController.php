@@ -31,6 +31,29 @@ class TaskController {
         }
     }
 
+    public function updateTask($task_id) {
+        // Mettre à jour une tâche
+        $title = $_POST['title'];
+        $description = $_POST['description'];
+        $priorite = $_POST['priorite'];
+        $date_echeance = $_POST['date_echeance'];
+
+        $query = "UPDATE taches SET title = :title, description = :description, priorite = :priorite, date_echeance = :date_echeance WHERE id = :task_id";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':priorite', $priorite);
+        $stmt->bindParam(':date_echeance', $date_echeance);
+        $stmt->bindParam(':task_id', $task_id);
+
+        if ($stmt->execute()) {
+            header('Location: index.php');
+            exit();
+        } else {
+            echo "Erreur lors de la mise à jour de la tâche.";
+        }
+    }
+
     public function deleteTask($task_id) {
         // Supprimer une tâche
         $query = "DELETE FROM taches WHERE id = :task_id";
@@ -57,4 +80,3 @@ class TaskController {
     }
 }
 ?>
-
