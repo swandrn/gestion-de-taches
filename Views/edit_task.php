@@ -13,7 +13,11 @@
         </div>
         <div class="form-group">
             <label for="priorite">Priorité :</label>
-            <input type="number" class="form-control" id="priorite" name="priorite" value="<?php echo htmlspecialchars($task['priorite']); ?>" required>
+            <select class="form-control" id="priorite" name="priorite">
+                <option value="0" <?php echo $task['priorite'] == '0' ? 'selected' : ''; ?>>Basse</option>
+                <option value="1" <?php echo $task['priorite'] == '1' ? 'selected' : ''; ?>>Normale</option>
+                <option value="2" <?php echo $task['priorite'] == '2' ? 'selected' : ''; ?>>Urgente</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="date_echeance">Date d'échéance :</label>
