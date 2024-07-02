@@ -25,7 +25,8 @@ Structure du dossier :
 
 Les fonctionnalités (dans les controllers)
 
-Inscription : Les nouveaux utilisateurs peuvent s'inscrire en fournissant leur nom, email et mot de passe.
+Igit push origin master
+nscription : Les nouveaux utilisateurs peuvent s'inscrire en fournissant leur nom, email et mot de passe.
 Connexion : Les utilisateurs inscrits peuvent se connecter avec leur email et mot de passe.
 Ajout de tâches : Les utilisateurs connectés peuvent ajouter de nouvelles tâches.
 Modification de tâches : Les utilisateurs peuvent modifier leurs tâches existantes.
