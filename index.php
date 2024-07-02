@@ -35,11 +35,7 @@ if (isset($_GET['action'])) {
         case 'edit_task':
             // Afficher le formulaire pour modifier une tâche si l'utilisateur est connecté et si l'ID de la tâche est fourni
             if (isset($_SESSION['user_id']) && isset($_GET['task_id'])) {
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $taskController->updateTask($_GET['task_id']);
-                } else {
-                    $taskController->showEditTaskForm($_GET['task_id']);
-                }
+                $taskController->showEditTaskForm($_GET['task_id']);
             } else {
                 // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
                 header('Location: index.php?action=login');
@@ -49,13 +45,10 @@ if (isset($_GET['action'])) {
         case 'delete_task':
             // Supprimer une tâche si l'utilisateur est connecté et si l'ID de la tâche est fourni
             if (isset($_SESSION['user_id']) && isset($_GET['task_id'])) {
-                if ($taskController->deleteTask($_GET['task_id'])) {
-                    // Rediriger vers le tableau de bord après suppression
-                    header('Location: index.php');
-                    exit();
-                } else {
-                    echo "Erreur lors de la suppression de la tâche.";
-                }
+                $taskController->deleteTask($_GET['task_id']);
+                // Rediriger vers le tableau de bord après suppression
+                header('Location: index.php');
+                exit();
             } else {
                 // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
                 header('Location: index.php?action=login');
@@ -67,18 +60,20 @@ if (isset($_GET['action'])) {
             $userController->logout();
             break;
         case 'login':
-            // Gérer le formulaire de connexion
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Gérer la soumission du formulaire de connexion
                 $userController->login();
             } else {
+                // Afficher le formulaire de connexion
                 $userController->showLoginForm();
             }
             break;
         case 'register':
-            // Gérer le formulaire d'inscription
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Gérer la soumission du formulaire d'inscription
                 $userController->register();
             } else {
+                // Afficher le formulaire d'inscription
                 $userController->showRegisterForm();
             }
             break;
@@ -86,7 +81,6 @@ if (isset($_GET['action'])) {
             // Rediriger vers la page d'accueil par défaut si l'action demandée n'est pas reconnue
             header('Location: index.php');
             exit();
-            break;
     }
 } else {
     // Afficher le tableau de bord par défaut si aucune action n'est demandée

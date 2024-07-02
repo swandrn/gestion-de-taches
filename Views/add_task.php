@@ -13,11 +13,15 @@
         </div>
         <div class="form-group">
             <label for="priority">Priorité :</label>
-            <select class="form-control" id="priority" name="priority">
-                <option value="0">Basse</option>
-                <option value="1">Normale</option>
-                <option value="2">Urgente</option>
-            </select>
+            <div class="select-container">
+    <select class="form-control" id="priority" name="priority" onchange="stylePriority(this)">
+        <option value="0" class="low-priority">Basse</option>
+        <option value="1" class="normal-priority">Normale</option>
+        <option value="2" class="high-priority">Urgente</option>
+    </select>
+</div>
+
+
         </div>
         <div class="form-group">
             <label for="date_echeance">Date d'échéance :</label>

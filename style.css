@@ -1,0 +1,25 @@
+/* Styles for the entire select box when different options are selected */
+.select-container {
+    border: 2px solid transparent;
+    padding: 5px;
+    width: fit-content;
+    display: inline-block;
+}
+
+.select-container.low-priority {
+    border-color: green;
+}
+
+.select-container.normal-priority {
+    border-color: blue;
+}
+
+.select-container.high-priority {
+    border-color: red;
+}
+
+/* Optional: Hide original select border */
+.form-control {
+    border: none;
+    outline: none;
+}
