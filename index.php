@@ -45,10 +45,13 @@ if (isset($_GET['action'])) {
         case 'delete_task':
             // Supprimer une tâche si l'utilisateur est connecté et si l'ID de la tâche est fourni
             if (isset($_SESSION['user_id']) && isset($_GET['task_id'])) {
-                $taskController->deleteTask($_GET['task_id']);
-                // Rediriger vers le tableau de bord après suppression
-                header('Location: index.php');
-                exit();
+                if ($taskController->deleteTask($_GET['task_id'])) {
+                    // Rediriger vers le tableau de bord après suppression
+                    header('Location: index.php');
+                    exit();
+                } else {
+                    echo "Erreur lors de la suppression de la tâche.";
+                }
             } else {
                 // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
                 header('Location: index.php?action=login');

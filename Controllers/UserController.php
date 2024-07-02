@@ -8,14 +8,17 @@ class UserController {
     }
 
     public function showLoginForm() {
+        // Affiche le formulaire de connexion
         include 'views/login.php';
     }
 
     public function showRegisterForm() {
+        // Affiche le formulaire d'inscription
         include 'views/register.php';
     }
 
     public function register() {
+        // Inscription de l'utilisateur
         $nom = $_POST['username'] ?? '';
         $email = $_POST['email'] ?? '';
         $mot_de_passe = $_POST['password'] ?? '';
@@ -42,6 +45,7 @@ class UserController {
     }
 
     public function login() {
+        // Connexion de l'utilisateur
         $email = $_POST['email'];
         $password = $_POST['password'];
 
@@ -59,6 +63,7 @@ class UserController {
     }
 
     public function logout() {
+        // Déconnexion de l'utilisateur
         session_destroy();
         header('Location: index.php');
         exit();
