@@ -31,29 +31,31 @@ class TaskController {
         }
     }
 
-    public function updateTask($task_id) {
-        // Mettre à jour une tâche
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        $priorite = $_POST['priorite'];
-        $date_echeance = $_POST['date_echeance'];
-    
-        $query = "UPDATE taches SET title = :title, description = :description, priorite = :priorite, date_echeance = :date_echeance WHERE id = :task_id";
+    public function addTask($title, $description, $priority, $due_date, $user_id) {
+        // Insérer une nouvelle tâche dans la base de données
+        $query = "INSERT INTO taches (utilisateur_id, title, description, priorite, date_echeance) VALUES (:user_id, :title, :description, :priority, :due_date)";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':priority', $priority);
+        $stmt->bindParam(':due_date', $due_date);
+
+        return $stmt->execute();
+    }
+
+    public function editTask($task_id, $title, $description, $priority, $due_date) {
+        // Mettre à jour une tâche existante
+        $query = "UPDATE taches SET title = :title, description = :description, priorite = :priority, date_echeance = :due_date WHERE id = :task_id";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':title', $title);
         $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':priorite', $priorite);
-        $stmt->bindParam(':date_echeance', $date_echeance);
+        $stmt->bindParam(':priority', $priority);
+        $stmt->bindParam(':due_date', $due_date);
         $stmt->bindParam(':task_id', $task_id);
-    
-        if ($stmt->execute()) {
-            header('Location: index.php');
-            exit();
-        } else {
-            echo "Erreur lors de la mise à jour de la tâche.";
-        }
+
+        return $stmt->execute();
     }
-    
 
     public function deleteTask($task_id) {
         // Supprimer une tâche
@@ -61,11 +63,7 @@ class TaskController {
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':task_id', $task_id);
 
-        if ($stmt->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        return $stmt->execute();
     }
 
     public function showDashboard($user_id) {
@@ -81,3 +79,4 @@ class TaskController {
     }
 }
 ?>
+
