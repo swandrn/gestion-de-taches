@@ -5,12 +5,11 @@
     <?php
     // Tableau associatif pour les priorités
     $priorities = [
-        0 => 'Basse',
+        0 => 'Urgente',
         1 => 'Normale',
-        2 => 'Urgente'
+        2 => 'Basse'
     ];
     ?>
-    <a href="index.php?action=add_task" class="btn btn-success mb-3">Ajouter tâche</a>
     <table class="table">
         <thead>
             <tr>
@@ -29,8 +28,8 @@
                     <td><?php echo htmlspecialchars($priorities[$task['priorite']]); ?></td>
                     <td><?php echo htmlspecialchars($task['date_echeance']); ?></td>
                     <td>
-                        <a href="index.php?action=edit_task&task_id=<?php echo $task['id']; ?>" class="btn btn-primary">Modifier</a>
-                        <a href="index.php?action=delete_task&task_id=<?php echo $task['id']; ?>" class="btn btn-danger">Supprimer</a>
+                        <a href="index.php?action=edit_task&task_id=<?php echo $task['id']; ?>" class="btn btn-warning">Modifier</a>
+                        <a href="index.php?action=delete_task&task_id=<?php echo $task['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

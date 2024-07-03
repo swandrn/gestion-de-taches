@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
-
 <div class="container">
-    <h2>Ajouter une tâche</h2>
+    <h2 class="mt-5">Ajouter une tâche</h2>
     <form action="index.php?action=add_task" method="POST">
         <div class="form-group">
             <label for="title">Titre :</label>
@@ -13,22 +12,18 @@
         </div>
         <div class="form-group">
             <label for="priority">Priorité :</label>
-            <div class="select-container">
-    <select class="form-control" id="priority" name="priority" onchange="stylePriority(this)">
-        <option value="0" class="low-priority">Basse</option>
-        <option value="1" class="normal-priority">Normale</option>
-        <option value="2" class="high-priority">Urgente</option>
-    </select>
-</div>
-
-
+            <select class="form-control" id="priority" name="priority">
+                <option value="0">Basse</option>
+                <option value="1">Normale</option>
+                <option value="2">Urgente</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="date_echeance">Date d'échéance :</label>
-            <input type="date" class="form-control" id="date_echeance" name="date_echeance" required>
+            <label for="due_date">Date d'échéance :</label>
+            <input type="date" class="form-control" id="due_date" name="due_date">
         </div>
-        <button type="submit" class="btn btn-primary">Ajouter la tâche</button>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
+    <a href="index.php" class="btn btn-secondary mt-3">Retour au tableau de bord</a>
 </div>
-
 <?php include 'footer.php'; ?>
