@@ -107,5 +107,20 @@ class TaskController {
         // Affiche le tableau de bord avec les tâches de l'utilisateur
         include 'views/dashboard.php';
     }
+
+   /* public function toggleTaskCompletion($task_id, $is_completed) {
+        // Mettre à jour le statut de la tâche
+        $query = "UPDATE taches SET is_completed = :is_completed WHERE id = :task_id";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(':is_completed', $is_completed, PDO::PARAM_BOOL);
+        $stmt->bindParam(':task_id', $task_id, PDO::PARAM_INT);
+
+        if ($stmt->execute()) {
+            header('Location: index.php');
+            exit();
+        } else {
+            echo "Erreur lors de la mise à jour du statut de la tâche.";
+        }
+    }*/
 }
 ?>
