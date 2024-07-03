@@ -25,7 +25,15 @@
                 <tr>
                     <td><?php echo htmlspecialchars($task['title']); ?></td>
                     <td><?php echo htmlspecialchars($task['description']); ?></td>
-                    <td><?php echo htmlspecialchars($priorities[$task['priorite']]); ?></td>
+                    <td>
+                        <?php
+                        if (isset($priorities[$task['priorite']])) {
+                            echo htmlspecialchars($priorities[$task['priorite']]);
+                        } else {
+                            echo 'Non spécifiée';
+                        }
+                        ?>
+                    </td>
                     <td><?php echo htmlspecialchars($task['date_echeance']); ?></td>
                     <td>
                         <a href="index.php?action=edit_task&task_id=<?php echo $task['id']; ?>" class="btn btn-warning">Modifier</a>

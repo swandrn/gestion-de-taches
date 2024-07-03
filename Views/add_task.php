@@ -13,9 +13,9 @@
         <div class="form-group">
             <label for="priority">Priorité :</label>
             <select class="form-control" id="priority" name="priority">
-                <option value="0">Basse</option>
+                <option value="2">Basse</option>
                 <option value="1">Normale</option>
-                <option value="2">Urgente</option>
+                <option value="0">Urgente</option>
             </select>
         </div>
         <div class="form-group">
