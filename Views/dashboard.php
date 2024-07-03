@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 <div class="container mt-5">
-    <h2>Tableau de Bord</h2>
+    <h2 class="text-center">Tableau de Bord</h2>
     <p>Vous avez <span id="completedCount">0</span> tâche(s) réalisée(s) sur <span id="totalCount"><?php echo count($tasks); ?></span> tâche(s).</p>
     <a href="index.php?action=add_task" class="btn btn-success">Ajouter une tâche</a>
     <table class="table">

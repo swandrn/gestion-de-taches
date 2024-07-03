@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Gesti Tache</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.php">Gesti Tache</a>
+    <a class="navbar-brand" href="index.php">
+        <img src="img/logoTacheTic.png" alt="Logo TâcheTic">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=add_task">Ajouter une tâche</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?action=logout">Se déconnecter</a>
                 </li>

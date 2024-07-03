@@ -1,0 +1,7 @@
+/* style.css */
+
+.navbar-brand img {
+    max-height: 80px; /* Ajustez la hauteur maximale de l'image selon vos besoins */
+    width: 200px; /* Pour maintenir les proportions */
+    vertical-align: middle; /* Ajustement vertical au centre si nécessaire */
+}
