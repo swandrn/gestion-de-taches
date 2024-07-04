@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <div class="container">
-    <h2>Inscription</h2>
+    <h1>Inscription</h1>
     <form action="index.php?action=register" method="POST">
         <div class="form-group">
             <label for="username">Nom d'utilisateur :</label>

@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 <div class="container">
-    <h2 class="mt-5">Modifier une tâche</h2>
+    <h1 class="mt-5">Modifier une tâche</h1>
     <form action="index.php?action=edit_task&task_id=<?php echo htmlspecialchars($_GET['task_id']); ?>" method="POST">
         <div class="form-group">
             <label for="title">Titre :</label>

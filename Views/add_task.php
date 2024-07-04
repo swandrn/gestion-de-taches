@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 <div class="container">
-    <h2 class="mt-5">Ajouter une tâche</h2>
+    <h1 class="mt-5">Ajouter une tâche</h1>
     <form action="index.php?action=add_task" method="POST">
         <div class="form-group">
             <label for="title">Titre :</label>

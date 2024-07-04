@@ -1,0 +1,121 @@
+/*********************************** DARK MODE **********************************************/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282828;
+    color: #fff;
+}
+
+.container {
+    background-color: #252525;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #39ff14;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+}
+
+.tacheRealise {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+#btnAjout {
+    margin-bottom: 20px;
+    background-color: #39ff14;
+    color: #000;
+    border: none;
+    text-shadow: 0 0 5px #39ff14;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-top: 1px solid #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #39ff14;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #333333;
+}
+
+.table-active {
+    background-color: #333333;
+}
+
+.btn-primary {
+    background-color: #ff00ff;
+    border: none;
+    text-shadow: 0 0 5px #ff00ff;
+    animation: neon-blink 1s infinite alternate;
+}
+
+.btn-danger {
+    background-color: #ff073a;
+    border: none;
+    text-shadow: 0 0 5px #ff073a;
+    animation: neon-blink 1s infinite alternate;
+}
+
+#avion {
+    position: absolute;
+    top: 50px;
+    left: -100px;
+    width: 50px;
+    height: auto;
+    animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+    0% {
+        left: -100px;
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        left: calc(100% - 50px);
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        left: -100px;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+/* Pour l'animation du N'avion */
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes neon-blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0.5;
+    }
+}

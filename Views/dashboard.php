@@ -1,8 +1,8 @@
 <?php include 'header.php'; ?>
 <div class="container mt-5">
 
-    <h2 class="text-center">Tableau de Bord</h2>
-    <p>Vous avez <span id="completedCount">0</span> tâche(s) réalisée(s) sur <span id="totalCount"><?php echo count($tasks); ?></span> tâche(s).</p>
+    <h1 class="text-center">Tableau de Bord</h1>
+    <p class="tacheRealise">Vous avez <span id="completedCount">0</span> tâche(s) réalisée(s) sur <span id="totalCount"><?php echo count($tasks); ?></span> tâche(s).</p>
     <a href="index.php?action=add_task" class="btn btn-success" id ="btnAjout">Ajouter une tâche</a>
     <table class="table">
         <thead>
@@ -51,5 +51,6 @@
         </tbody>
     </table>
 </div>
+<!-- <img src="img/avion.png" alt="Avion" id="avion"> -->
 <script src="script.js"></script>
 <?php include 'footer.php'; ?>
