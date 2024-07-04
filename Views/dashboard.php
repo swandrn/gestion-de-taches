@@ -3,10 +3,10 @@
 
     <h2 class="text-center">Tableau de Bord</h2>
     <p>Vous avez <span id="completedCount">0</span> tâche(s) réalisée(s) sur <span id="totalCount"><?php echo count($tasks); ?></span> tâche(s).</p>
-    <a href="index.php?action=add_task" class="btn btn-success">Ajouter une tâche</a>
+    <a href="index.php?action=add_task" class="btn btn-success" id ="btnAjout">Ajouter une tâche</a>
     <table class="table">
         <thead>
-            <tr>
+            <tr class="table-active">
                 <th scope="col">Réalisée</th>
                 <th scope="col">Titre</th>
                 <th scope="col">Description</th>
