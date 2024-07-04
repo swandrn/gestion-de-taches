@@ -51,5 +51,5 @@
         </tbody>
     </table>
 </div>
-<script src="script.js"></script>
+<script src="Js/script.js"></script>
 <?php include 'footer.php'; ?>
