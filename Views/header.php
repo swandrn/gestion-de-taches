@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="css/darkmode.css" rel="stylesheet"> -->
+    <link href="css/darkmode.css" rel="stylesheet" id="dark-mode-css" disabled>
+    <script src="Js/script.js"></script>
     <title>Gesti Tache</title>
 </head>
 
@@ -22,7 +23,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item switch-container">
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="darkModeToggle">
                         <span class="slider round"></span>
                     </label>
                 </li>

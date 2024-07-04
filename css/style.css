@@ -1,4 +1,8 @@
 /* style.css */
+body {
+  background-color: #fff;
+  color: #000;
+}
 
 .navbar-brand img {
     max-height: 80px; /* Ajustez la hauteur maximale de l'image selon vos besoins */
@@ -11,7 +15,7 @@
     
 } */
 
-h2 {
+h1 {
     font-size:3.5em;
     text-shadow:#bbe5ff 0 -1px 0,
 #0098f8 1px 1px 0,
@@ -140,17 +144,17 @@ h2 {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #434BE3;
   -webkit-transition: .2s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #434BE3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #434BE3;
 }
 
 input:checked + .slider:before {

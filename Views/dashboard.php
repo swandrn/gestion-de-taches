@@ -52,5 +52,4 @@
     </table>
 </div>
 <!-- <img src="img/avion.png" alt="Avion" id="avion"> -->
-<script src="Js/script.js"></script>
 <?php include 'footer.php'; ?>
