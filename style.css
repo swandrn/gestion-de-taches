@@ -51,4 +51,7 @@ h2 {
   .nav-item:not(.is-active):hover {
     color: #333;
   }
-  
+
+  footer {
+    justify-content: center;
+  }
