@@ -1,0 +1,21 @@
+// J'ai fait des tests mais c'est pas ouf, je laisse le fichier pour continuer à m'amuser après...
+
+@import "bourbon";
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  text-align: center;
+}
+
+span{
+  display: inline-block;
+}

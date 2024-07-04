@@ -44,3 +44,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialiser le compteur au chargement de la page
     updateCounter(completedTasks, totalTasks);
 });
+

@@ -5,3 +5,50 @@
     width: 200px; /* Pour maintenir les proportions */
     vertical-align: middle; /* Ajustement vertical au centre si nécessaire */
 }
+
+/* #btnModifier {
+    background-color: pink;
+    
+} */
+
+h2 {
+    font-size:4em;
+    text-shadow:#bbe5ff 0 -1px 0,
+#0098f8 1px 1px 0,
+#018de6 2px 2px 0,
+#006fb5 3px 3px 0,
+#005386 4px 4px 0,
+#004874 5px 5px 0,
+#333 5px 5px 10px;color:#26abff;
+}
+
+/* On stylise chaque élément */
+  .nav-item {
+    color: #83818c;
+    font-family: arial, sans-serif;
+    padding: 20px;
+    margin: 0 6px;
+    position: relative;
+  }
+  
+/* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
+  .nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    background-color: #dfe2ea;
+    height: 5px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    left: 0;
+    transition: .3s;
+  }
+  
+  /* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
+  .nav-item:not(.is-active):hover:before {
+    bottom: 0;
+  }
+  .nav-item:not(.is-active):hover {
+    color: #333;
+  }
+  
