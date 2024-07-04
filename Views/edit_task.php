@@ -22,7 +22,7 @@
             <label for="due_date">Date d'échéance :</label>
             <input type="date" class="form-control" id="due_date" name="due_date" value="<?php echo htmlspecialchars($task['date_echeance']); ?>">
         </div>
-        <button type="submit" class="btn btn-primary">Modifier</button>
+        <button type="submit" class="btn btn-primary">Valider</button>
     </form>
     <a href="index.php" class="btn btn-secondary mt-3">Retour au tableau de bord</a>
 </div>
