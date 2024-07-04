@@ -5,9 +5,9 @@ body {
 }
 
 .navbar-brand img {
-    max-height: 80px; /* Ajustez la hauteur maximale de l'image selon vos besoins */
-    width: 200px; /* Pour maintenir les proportions */
-    vertical-align: middle; /* Ajustement vertical au centre si nécessaire */
+  max-height: 80px;
+  width: 200px;
+  vertical-align: middle;
 }
 
 /* #btnModifier {
@@ -17,13 +17,7 @@ body {
 
 h1 {
     font-size:3.5em;
-    text-shadow:#bbe5ff 0 -1px 0,
-#0098f8 1px 1px 0,
-#018de6 2px 2px 0,
-#006fb5 3px 3px 0,
-#005386 4px 4px 0,
-#004874 5px 5px 0,
-#333 5px 5px 10px;color:#26abff;
+    color: #545cfc;
 }
 
 /* On stylise chaque élément */
