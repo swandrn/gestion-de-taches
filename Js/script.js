@@ -1,10 +1,11 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const checkboxes = document.querySelectorAll('.task-completed');
     const totalCountElement = document.getElementById('totalCount');
     const completedCountElement = document.getElementById('completedCount');
-    
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const logoImage = document.querySelector('.navbar-brand img');
+    const navbar = document.querySelector('.navbar');
+
     let totalTasks = checkboxes.length;
     let completedTasks = 0;
 
@@ -43,5 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialiser le compteur au chargement de la page
     updateCounter(completedTasks, totalTasks);
-});
 
+    // Gestion du switch de mode sombre
+    darkModeToggle.addEventListener('change', function() {
+        const darkModeCss = document.getElementById('dark-mode-css');
+        if (this.checked) {
+            darkModeCss.removeAttribute('disabled');
+            logoImage.src = 'img/logoTacheTicDark.png';
+            navbar.classList.add('navbar-darkmode');
+        } else {
+            darkModeCss.setAttribute('disabled', 'disabled');
+            logoImage.src = 'img/logoTacheTic.png';
+            navbar.classList.remove('navbar-darkmode');
+        }
+    });
+});
