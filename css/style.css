@@ -87,16 +87,12 @@ footer {
   transform: scale(1.05);
 }
 
-.table {
-}
-
 @media (min-width: 768px) {
   .button-71 {
     padding: 16px 48px;
   }
 }
 
-/* Switch styling */
 .switch {
   position: relative;
   display: inline-block;

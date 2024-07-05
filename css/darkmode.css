@@ -21,7 +21,6 @@ h1 {
 }
 
 #btnAjout {
-    margin-bottom: 20px;
     background-color: #39ff14;
     color: #000;
     border: none;
@@ -118,4 +117,41 @@ h1 {
 
 .navbar-darkmode .nav-link {
     color: #fff !important;
+}
+
+/* Footer dark mode styles */
+.footer-darkmode {
+    background-color: #030303 !important;
+    color: #fff !important;
+}
+
+.footer-darkmode a {
+    color: #fff !important;
+}
+
+.footer-darkmode a:hover {
+    color: #cccccc !important;
+}
+av-link {
+    color: #fff !important;
+}
+/* Footer dark mode styles */
+.footer-darkmode {
+    background-color: #030303 !important;
+    color: white !important;
+}
+
+.footer-darkmode a {
+    color: #fff !important;
+}
+
+.footer-darkmode a:hover {
+    color: #cccccc !important;
+}
+av-link {
+    color: #fff !important;
+}
+
+footer {
+    background-color: #030303 !important;
 }

@@ -1,9 +1,7 @@
 </div>
-<footer class="footer mt-auto py-3 bg-light">
-<div class="footer-container">  
-               <!-- class list-unstyled de bootstrap pour enlever les puces -->
+<footer class="footer mt-auto py-3 bg-light footer-darkmode">
+    <div class="footer-container">  
         <ul class="list-unstyled">
-                <!-- class d-inline bootsrap pour mettre en ligne -->
             <li class="d-inline mx-2"><a href="https://github.com/swandrn/gestion-de-taches" target="_blank"><i class="fab fa-git-alt"></i>&copy; 2024 </a></li>
             <li class="d-inline mx-2"><a href="https://github.com/swandrn/gestion-de-taches" target="_blank"><i class="fab fa-git-alt"></i> Projet : TACHETIC</a></li>
             <li class="d-inline mx-2"><a href="https://github.com/swandrn" target="_blank"><i class="fab fa-github"></i> Swan / @swandrn</a></li>

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/darkmode.css" rel="stylesheet" id="dark-mode-css" disabled>
-    <script src="Js/script.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/tasks.js"></script>
     <title>Gesti Tache</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php">

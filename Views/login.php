@@ -11,7 +11,7 @@
             <label for="password">Mot de passe :</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary" id ="btnConnecter">Se connecter</button>
+        <button type="submit" class="btn btn-primary" id="btnConnecter">Se connecter</button>
     </form>
     <p>Pas encore inscrit ? <a href="index.php?action=register">Inscrivez-vous ici</a></p>
 </div>
