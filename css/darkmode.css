@@ -63,7 +63,7 @@ h1 {
 }
 
 .btn-danger {
-    background-color: #ff073a;
+    background-color: #f70ee0;
     border: none;
     text-shadow: 0 0 5px #ff073a;
     animation: neon-blink 1s infinite alternate;
