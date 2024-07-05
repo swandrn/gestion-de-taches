@@ -26,9 +26,20 @@ Structure du dossier :
 Les fonctionnalités (dans les controllers)
 
 Igit push origin master
-nscription : Les nouveaux utilisateurs peuvent s'inscrire en fournissant leur nom, email et mot de passe.
+Inscription : Les nouveaux utilisateurs peuvent s'inscrire en fournissant leur nom, email et mot de passe.
 Connexion : Les utilisateurs inscrits peuvent se connecter avec leur email et mot de passe.
 Ajout de tâches : Les utilisateurs connectés peuvent ajouter de nouvelles tâches.
 Modification de tâches : Les utilisateurs peuvent modifier leurs tâches existantes.
 Suppression de tâches : Les utilisateurs peuvent supprimer leurs tâches.
 Déconnexion : Les utilisateurs peuvent se déconnecter de l'application.
+
+SOURCE CSS :
+https://www.blogduwebdesign.com/blog/webdesign/30-effets-texte-open-source-css.html
+https://ecard.enter-media.org/css-text-effects/
+https://graphiste.com/blog/30-animations-de-texte-pour-surprendre-vos-visiteurs/
+https://codebuds.com/blog/sass-scss-introduction
+https://www.aleo.agency/blog/footer-site-internet/
+https://getcssscan.com/css-buttons-examples
+https://colorlib.com/wp/template/table-09/
+https://blog.hubspot.fr/website/animation-css
+https://cssbud.com/css-generator/css-glow-generator/
