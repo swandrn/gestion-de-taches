@@ -11,8 +11,8 @@ body {
 }
 
 h1 {
-    color: #545cfc;
-    text-shadow: 0 0 10px #545cfc, 0 0 20px #545cfc,
+    color: #434BE7;
+    text-shadow: 0 0 10px #434BE7, 0 0 20px #434BE7,
 }
 
 .tacheRealise {
@@ -56,9 +56,9 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #311b8a;
+    background-color: #434BE7;
     border: none;
-    text-shadow: 0 0 5px #311b8a;
+    text-shadow: 0 0 5px #434BE7;
 }
 
 .btn-danger {
