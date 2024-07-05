@@ -42,13 +42,10 @@ h1 {
 .table td {
     padding: 1rem;
     vertical-align: middle;
-    border-top: 1px solid #39ff14;
-    text-shadow: 0 0 5px #39ff14;
 }
 
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #39ff14;
 }
 
 .table-hover tbody tr:hover {
@@ -60,10 +57,9 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #ff00ff;
+    background-color: #311b8a;
     border: none;
-    text-shadow: 0 0 5px #ff00ff;
-    animation: neon-blink 1s infinite alternate;
+    text-shadow: 0 0 5px #311b8a;
 }
 
 .btn-danger {

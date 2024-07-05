@@ -10,50 +10,41 @@ body {
   vertical-align: middle;
 }
 
-/* #btnModifier {
-    background-color: pink;
-    
-} */
-
 h1 {
-    font-size:3.5em;
-    color: #545cfc;
+  font-size: 3.5em;
+  color: #545cfc;
 }
 
-/* On stylise chaque élément */
-  .nav-item {
-    color: #83818c;
-    font-family: arial, sans-serif;
-    padding: 20px;
-    margin: 0 6px;
-    position: relative;
-  }
-  
-/* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
-  .nav-item:before {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    background-color: #dfe2ea;
-    height: 5px;
-    width: 100%;
-    border-radius: 8px 8px 0 0;
-    left: 0;
-    transition: .3s;
-  }
-  
-  /* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
-  .nav-item:not(.is-active):hover:before {
-    bottom: 0;
-  }
-  .nav-item:not(.is-active):hover {
-    color: #333;
-  }
+.nav-item {
+  color: #83818c;
+  font-family: arial, sans-serif;
+  padding: 20px;
+  margin: 0 6px;
+  position: relative;
+}
 
-  footer {
-    text-align: center;
-  }
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #dfe2ea;
+  height: 5px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  left: 0;
+  transition: .3s;
+}
 
+.nav-item:not(.is-active):hover:before {
+  bottom: 0;
+}
+.nav-item:not(.is-active):hover {
+  color: #333;
+}
+
+footer {
+  text-align: center;
+}
 
 #btnAjout {
   background-color: #0078d0;
@@ -62,7 +53,7 @@ h1 {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: 600;
   outline: 0;
@@ -97,7 +88,6 @@ h1 {
 }
 
 .table {
-    
 }
 
 @media (min-width: 768px) {
@@ -106,6 +96,7 @@ h1 {
   }
 }
 
+/* Switch styling */
 .switch {
   position: relative;
   display: inline-block;
@@ -113,7 +104,7 @@ h1 {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -126,9 +117,11 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .2s;
+  background-color: #434BE3;
+  background-image:url("../img/cloud-3052118_1280.jpg");
+  background-position: center;
   transition: .4s;
+  border-radius: 34px;
 }
 
 .slider:before {
@@ -138,13 +131,15 @@ h1 {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #434BE3;
-  -webkit-transition: .2s;
+  background-color: yellow;
   transition: .4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #434BE3;
+  background-color: #222222;
+  background-image:url("../img/stars-1837306_1280.jpg");
+  background-position: center;
 }
 
 input:focus + .slider {
@@ -152,9 +147,21 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-color: yellow;
+}
+
+input:checked + .slider:after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 22px;
+  background-color: #222222;
+  background-image:url("../img/stars-1837306_1280.jpg");
+  background-position: center;
+  border-radius: 50%;
+  top: 4px;
+  right: 14px;
 }
 
 .slider.round {
