@@ -108,19 +108,41 @@ class TaskController {
         include 'views/dashboard.php';
     }
 
-   /* public function toggleTaskCompletion($task_id, $is_completed) {
-        // Mettre à jour le statut de la tâche
-        $query = "UPDATE taches SET is_completed = :is_completed WHERE id = :task_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':is_completed', $is_completed, PDO::PARAM_BOOL);
-        $stmt->bindParam(':task_id', $task_id, PDO::PARAM_INT);
-
-        if ($stmt->execute()) {
-            header('Location: index.php');
-            exit();
-        } else {
-            echo "Erreur lors de la mise à jour du statut de la tâche.";
+    public function fetchTasks() {
+        // Récupérer les paramètres de tri depuis la requête GET
+        $triType = $_GET['triType'] ?? 'none'; // Type de tri (date ou priority), 'none' par défaut
+        $triOrder = $_GET['triOrder'] ?? ''; // Ordre de tri (asc ou desc), chaîne vide par défaut
+    
+        // Commencer la requête SQL pour sélectionner toutes les tâches de l'utilisateur connecté
+        $query = "SELECT * FROM taches WHERE utilisateur_id = :user_id";
+    
+        // Ajouter une clause ORDER BY à la requête en fonction du type de tri sélectionné
+        if ($triType === 'date') {
+            // Trier par date d'échéance en ordre ascendant ou descendant
+            $query .= ' ORDER BY date_echeance ' . ($triOrder === 'asc' ? 'ASC' : 'DESC');
+        } elseif ($triType === 'priority') {
+            // Trier par priorité en ordre ascendant ou descendant
+            $query .= ' ORDER BY priorite ' . ($triOrder === 'asc' ? 'ASC' : 'DESC');
         }
-    }*/
+    
+        // Préparer la requête SQL
+        $stmt = $this->db->prepare($query);
+    
+        // Lier le paramètre utilisateur_id à la valeur de l'ID de l'utilisateur connecté
+        $stmt->bindParam(':user_id', $_SESSION['user_id']);
+    
+        // Exécuter la requête
+        $stmt->execute();
+    
+        // Récupérer toutes les tâches résultantes de la requête
+        $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        // Encoder les tâches en JSON et les renvoyer comme réponse
+        echo json_encode($tasks);
+        
+        // Terminer le script après avoir envoyé la réponse
+        exit;
+    }
+    
 }
 ?>

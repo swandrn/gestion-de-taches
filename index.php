@@ -66,6 +66,16 @@ if (isset($_GET['action'])) {
                 exit();
             }
             break;
+        case 'fetch_tasks':
+            // Récupérer les tâches triées
+            if (isset($_SESSION['user_id'])) {
+                $taskController->fetchTasks();
+            } else {
+                // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+                header('Location: index.php?action=login');
+                exit();
+            }
+            break;
         case 'logout':
             // Déconnecter l'utilisateur
             $userController->logout();
